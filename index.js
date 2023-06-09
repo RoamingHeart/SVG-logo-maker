@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const {Circle, Square, Triangle} = require('./lib/shapes');
-const { generate } = require('rxjs');
+
 
 //array of questions
 const questions = [
@@ -49,79 +49,8 @@ class SVG {
     }
 }
 
-//creates the file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, function(err) {
-//         if(err) {
-//             return console.log(err)
-//         }
-//         console.log('You have finished generating a logo.svg...')
-//     })
-// }
 
-
-// async function init() {
-//     var svgText = '';
-//     var svgFile = 'logo.svg';
-
-//     //ask the users for their input
-//     const answers = await inquirer.prompt(questions);
-
-//     //user selected shape
-//     var userShape = answers.shape;
-
-//     //user input shape color
-//     var userShapeColor = answers['shape-color'];
-
-//     //user input text
-//     var userText = '';
-
-//     //user input text color
-//     var userTextColor = answers['text-color'];
-
-    
-
-
-//     //check if the user input 3 letters for the text input
-//     if(answers.text.length > 0 && answers.text.length < 4) {
-//         //within 3 characters
-//         userText = answers.text;
-//     } else {
-//         //not within three characters
-//         console.log("Invalid Input! User needs to have 1-3 characters!");
-//         return;
-//     }
-
-//     //print out the user selections into the console
-//     console.log('User Selected Shape: ' + userShape);
-//     console.log('User Inputed Shape Color: ' + userShapeColor);
-//     console.log('User Inputed Text: ' + userText );
-//     console.log('User Inputed Text Color:' + userTextColor);
-
-
-//     let selectedShape;
-//     if(userShape === 'Circle') {
-//         selectedShape = new Circle();
-//     } else if(userShape === 'Square') {
-//         selectedShape = new Square();
-//     } else if(userShape === 'Triangle'){
-//         selectedShape = new Triangle();
-//     } else {
-//         console.log('invalid')
-//     }
-
-//     selectedShape.setColor(userShapeColor);
-
-//     //create a new svg and add shape + text elements to it
-//     var svg = new SVG();
-//     svg.setText(userText, userTextColor);
-//     svg.setShape(selectedShape);
-//     svgText = svg.render();
-
-//     writeToFile(svgFile, svgText);
-
-// }
-
+//function to initialize app
 function init() {
     inquirer.prompt(questions)
         .then((data) => {
