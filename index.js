@@ -6,22 +6,26 @@ const {Circle, Square, Triangle} = require('./lib/shapes');
 //array of questions
 const questions = [
     {
+        //list to chose the shape of the logo
         type: 'list',
         name: 'shape',
         message: 'Please choose which shape you would like: ',
         choices: ['Circle', 'Square', 'Triangle'],
     },
     {
+        //input for which color is desired
         type: 'input',
         name: 'shape-color',
         message: 'Please type in which color you would like the logo to be in: ',
     },
     {
+        //input for what the text of the logo will be
         type: 'input',
         name: 'text',
         message: 'Please type in the THREE(3) characters you would like in the logo: ',
     },
     {
+        //input for what color the logo text is wanted in
         type: 'input',
         name: 'text-color',
         message: 'Please type what color you would like the text to be in: ',

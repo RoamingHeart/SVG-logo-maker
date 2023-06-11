@@ -5,7 +5,7 @@
 This is an application that creates a logo using user inputs from inquirer prompt and generates a SVG file that holds the user's desired image.
 
 ## Demo
-[![Application Demo Video](https://img.youtube.com/vi/youtubeid/maxresdefault.jpg)](https://youtu.be/youtubeid)
+[![Application Demo Video](https://img.youtube.com/vi/-ZAfRyCHSbc/maxresdefault.jpg)](https://youtu.be/-ZAfRyCHSbc)
 
 ## Technologies Used
 * Javascript
